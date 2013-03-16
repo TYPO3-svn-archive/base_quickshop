@@ -212,7 +212,7 @@ config {
         TYPO3-Development: http://die-netzmacher.de/
 )  
   headerComment.data = LLL:EXT:base_quickshop/locallang_db.xml:headerComment
-)  
+ 
 }
   // config
 
