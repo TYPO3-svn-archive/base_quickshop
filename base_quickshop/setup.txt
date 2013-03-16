@@ -178,9 +178,11 @@ temp.body {
       21 = TEXT
       21 {
         value (
-           <li class="spc">
+          <ul>
+            <li class="spc">
               &nbsp;
             </li>
+          </ul>
         )
       }
       22 < temp.menuMain
