@@ -8,6 +8,9 @@
   // temp.menuMain
   // temp.head
   // temp.body
+  // config
+  // tt_content.table
+  // page
 
 
 
@@ -191,23 +194,28 @@ temp.body {
   // temp.body
 
 
-
-  // config
-  // tt_content.table
-  // page
-  
-  
-  
   ///////////////////////////////////////////
   //
   // config
 
 config {
-  baseURL           = {$plugin.base_quickshop.basic.host}
+
+  admPanel        = 1
+  baseURL         = {$plugin.base_quickshop.basic.host}
+  extTarget       = _blank
+
+  doctype         = xhtml_strict
+  metaCharset     = UTF-8
+  xhtml_cleaning  = all
+  //language        = de
+  //htmlTag_langKey = de
+
   tx_realurl_enable = 1
+
   spamProtectEmailAddresses               = 6
   spamProtectEmailAddresses_atSubst       = <span style="display:none;">spamfilter</span><span class="dummy">@</span>
   spamProtectEmailAddresses_lastDotSubst  = <span style="display:none;">spamfilter</span><span class="dummy">.</span>
+
   headerComment (
         TYPO3 Quick Shop - developed by http://die-netzmacher.de/
 )  
@@ -223,7 +231,7 @@ config {
 
 tt_content.table.20.stdWrap {
   addParams {
-    border = 0
+    border      = 0
     cellspacing = 0
     cellpadding = 0
   }
@@ -241,32 +249,28 @@ page {
 
   typeNum = 0
 
-  config {
-    extTarget       = _blank
-    //language        = de
-    metaCharset     = UTF-8
-    doctype         = xhtml_strict
-    xhtml_cleaning  = all
-    //htmlTag_langKey = de
-    admPanel        = 1
-  }
-
   shortcutIcon = {$plugin.base_quickshop.paths.favicon}
 
   headerData.10 < temp.head
   includeCSS {
-     styles   = {$plugin.base_quickshop.paths.css}
+    styles = {$plugin.base_quickshop.paths.css}
   }  
   meta {
-    author.data = LLL:EXT:base_quickshop/locallang_db.xml:metaAuthor
+    author {
+      data = LLL:EXT:base_quickshop/locallang_db.xml:metaAuthor
+    }
     keywords {
-      field    = keywords
-      ifEmpty.data = LLL:EXT:base_quickshop/locallang_db.xml:metaKeywords
+      field = keywords
+      ifEmpty {
+        data = LLL:EXT:base_quickshop/locallang_db.xml:metaKeywords
+      }
       keywords = 1
     }
     description {
-      field   = description
-      ifEmpty.data = LLL:EXT:base_quickshop/locallang_db.xml:metaDescription
+      field = description
+      ifEmpty {
+        data = LLL:EXT:base_quickshop/locallang_db.xml:metaDescription
+      }
     }
   }
 
