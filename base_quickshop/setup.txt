@@ -208,10 +208,9 @@ config {
   spamProtectEmailAddresses               = 6
   spamProtectEmailAddresses_atSubst       = <span style="display:none;">spamfilter</span><span class="dummy">@</span>
   spamProtectEmailAddresses_lastDotSubst  = <span style="display:none;">spamfilter</span><span class="dummy">.</span>
-  XXheaderComment (
-        TYPO3-Development: http://die-netzmacher.de/
+  headerComment (
+        TYPO3 Quick Shop - developed by http://die-netzmacher.de/
 )  
-  headerComment.data = LLL:EXT:base_quickshop/locallang_db.xml:headerComment
  
 }
   // config
