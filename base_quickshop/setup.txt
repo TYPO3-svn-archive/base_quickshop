@@ -1,0 +1,279 @@
+
+  //////////////////////////////////////////////
+  //
+  // INDEX
+  //
+  // plugin.tx_automaketemplate_pi1
+  // temp.tmenu
+  // temp.menuMain
+  // temp.head
+  // temp.body
+
+
+
+  //////////////////////////////////////////////
+  //
+  // plugin.tx_automaketemplate_pi1
+
+plugin.tx_automaketemplate_pi1 {
+
+  content = FILE
+  content.file = {$plugin.base_quickshop.paths.html}
+
+  elements {
+    BODY.all = 1
+    BODY.all.subpartMarker = DOCUMENT_BODY
+
+    HEAD.all = 1
+    HEAD.all.subpartMarker = DOCUMENT_HEADER
+    HEAD.rmTagSections = title
+
+    DIV.all = 1
+  }
+
+  relPathPrefix = {$plugin.base_quickshop.paths.res}
+}
+  // plugin.tx_automaketemplate_pi1
+
+
+
+  /////////////////////////////////
+  //
+  // temp.tmenu
+
+temp.tmenu = TMENU
+temp.tmenu {
+
+  NO = 1
+  NO.wrapItemAndSub (
+            <li class="no">
+              |
+            </li>
+  )
+  NO.ATagTitle.field = title
+  NO.stdWrap.htmlSpecialChars = 1
+
+  CUR = 1
+  CUR.wrapItemAndSub (
+            <li class="cur">
+              |
+            </li>
+  )
+  CUR.ATagTitle.field = title
+  CUR.stdWrap.htmlSpecialChars = 1
+
+  ACT = 1
+  ACT.wrapItemAndSub (
+            <li class="act">
+              |
+            </li>
+  )
+  ACT.ATagTitle.field = title
+  ACT.stdWrap.htmlSpecialChars = 1
+
+  ACTIFSUB = 1
+  ACTIFSUB.wrapItemAndSub (
+            <li class="actifsub">
+              |
+            </li>
+  )
+  ACTIFSUB.ATagTitle.field = title
+  ACTIFSUB.stdWrap.htmlSpecialChars = 1
+
+  SPC = 1
+  SPC {
+    wrapItemAndSub (
+            <li class="spc">
+              &nbsp;
+            </li>
+    )
+    doNotShowLink = 1
+  }
+
+  wrap = <ul>|</ul>
+}
+  // temp.tmenu
+
+
+
+  /////////////////////////////////
+  //
+  // temp.menuMain
+
+temp.menuMain = HMENU
+temp.menuMain {
+  # Menue ab Ebene 1
+  entry.level = 1
+  1 < temp.tmenu
+  2 < temp.tmenu
+  3 < temp.tmenu
+  4 < temp.tmenu
+}
+  // temp.menuMain
+
+
+
+  //////////////////////////////////////////////
+  // 
+  // temp.head
+
+temp.head = TEMPLATE
+temp.head {
+  template      =< plugin.tx_automaketemplate_pi1
+  workOnSubpart = DOCUMENT_HEADER
+}
+  // temp.head
+
+
+
+  //////////////////////////////////////////////
+  // 
+  // temp.body
+
+temp.body = TEMPLATE
+temp.body {
+  template      =< plugin.tx_automaketemplate_pi1
+  workOnSubpart = DOCUMENT_BODY
+
+  subparts {
+    header  < styles.content.get
+    header {
+      select.pidInList = {$plugin.base_quickshop.pages.library.header}
+    }
+    content < styles.content.get
+    menue = COA
+    menue {
+      10 = IMAGE
+      10 {
+        file {
+          import = uploads/media/
+          import {
+            field   = media
+            listNum = 0
+            override {
+              data = levelmedia: -1, slide
+            }
+          }
+          maxW = {$plugin.base_quickshop.dims.headerimage.maxW}
+          maxH = {$plugin.base_quickshop.dims.headerimage.maxH}
+        }
+        imageLinkWrap = 1
+        imageLinkWrap {
+          enable = 1
+          typolink {
+            parameter = {$plugin.base_quickshop.pages.root}
+            //title     = {$myConst.words.title_tag_rootpage}
+            title.data = LLL:EXT:base_quickshop/locallang_db.xml:headerimageLinkTitle
+          }
+        }
+      }
+      20 = HMENU
+      20 {
+        special = list
+        special.value = {$plugin.base_quickshop.pages.root}
+        1 < temp.tmenu
+      }
+      21 = TEXT
+      21 {
+        value (
+           <li class="spc">
+              &nbsp;
+            </li>
+        )
+      }
+      22 < temp.menuMain
+    }
+    footer  < styles.content.get
+    footer {
+      select.pidInList = {$plugin.base_quickshop.pages.library.footer}
+    }
+  }
+}
+  // temp.body
+
+
+
+  // config
+  // tt_content.table
+  // page
+  
+  
+  
+  ///////////////////////////////////////////
+  //
+  // config
+
+config {
+  baseURL           = {$plugin.base_quickshop.basic.host}
+  tx_realurl_enable = 1
+  spamProtectEmailAddresses               = 6
+  spamProtectEmailAddresses_atSubst       = <span style="display:none;">spamfilter</span><span class="dummy">@</span>
+  spamProtectEmailAddresses_lastDotSubst  = <span style="display:none;">spamfilter</span><span class="dummy">.</span>
+  headerComment (
+        TYPO3-Development: http://die-netzmacher.de/
+)  
+}
+  // config
+
+
+
+  ///////////////////////////////////////////
+  //
+  // tt_content
+
+tt_content.table.20.stdWrap {
+  addParams {
+    border = 0
+    cellspacing = 0
+    cellpadding = 0
+  }
+}
+  // tt_content
+
+
+
+  ///////////////////////////////////////////
+  //
+  // page
+
+page = PAGE
+page {
+
+  typeNum = 0
+
+  config {
+    extTarget       = _blank
+    //language        = de
+    metaCharset     = UTF-8
+    doctype         = xhtml_strict
+    xhtml_cleaning  = all
+    //htmlTag_langKey = de
+    admPanel        = 1
+  }
+
+  shortcutIcon = {$plugin.base_quickshop.paths.favicon}
+
+  headerData.10 < temp.head
+  includeCSS {
+     styles   = {$plugin.base_quickshop.paths.css}
+  }  
+  meta {
+    //author = {$myConst.client.name}
+    author.data = LLL:EXT:base_quickshop/locallang_db.xml:metaAuthor
+    keywords {
+      field    = keywords
+      //ifEmpty  = {$myConst.client.seo.default.keywords}
+      ifEmpty.data = LLL:EXT:base_quickshop/locallang_db.xml:metaKeywords
+      keywords = 1
+    }
+    description {
+      field   = description
+      //ifEmpty = {$myConst.client.seo.default.description}
+      ifEmpty.data = LLL:EXT:base_quickshop/locallang_db.xml:metaDescription
+    }
+  }
+
+  bodyTag = <body>
+  10 < temp.body
+}
+  // page
