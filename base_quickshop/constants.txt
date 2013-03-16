@@ -25,8 +25,6 @@ plugin.base_quickshop {
   # cat=Quick Shop template - dims//201; type=integer; label= Header image max width:max width for the header image in pixel
   dims.headerimage.maxW = 210
 
-  # cat=Quick Shop template - pages//201; type=integer; label= Page root:Uid of the root page, the page, where you are offering the Quick Shop items
-  pages.root = 
   # cat=Quick Shop template - pages//202; type=integer; label= Page header:Uid of the header page, the page which contains the content for the header.
   pages.library.header = 
   # cat=Quick Shop template - pages//203; type=integer; label= Page footer:Uid of the footer page, the page which contains the content for the footer.

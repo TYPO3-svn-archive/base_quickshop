@@ -164,7 +164,7 @@ temp.body {
         imageLinkWrap {
           enable = 1
           typolink {
-            parameter = {$plugin.base_quickshop.pages.root}
+            parameter = {$plugin.quick_shop.pages.root}
             title.data = LLL:EXT:base_quickshop/locallang_db.xml:headerimageLinkTitle
           }
         }
@@ -172,7 +172,7 @@ temp.body {
       20 = HMENU
       20 {
         special = list
-        special.value = {$plugin.base_quickshop.pages.root}
+        special.value = {$plugin.quick_shop.pages.root}
         1 < temp.tmenu
       }
       21 = TEXT
