@@ -170,16 +170,20 @@ temp.body {
           }
         }
       }
-        // Root page
-      20 = HMENU
+      20  < styles.content.get
       20 {
+        select.pidInList = {$plugin.caddy.pages.caddymini}
+      }
+        // Root page
+      30 = HMENU
+      30 {
         special = list
         special.value = {$plugin.quick_shop.pages.root}
         1 < temp.tmenu
       }
         // Space
-      21 = TEXT
-      21 {
+      31 = TEXT
+      31 {
         value (
           <ul>
             <li class="spc">
@@ -189,7 +193,7 @@ temp.body {
         )
       }
         // Menu
-      22 < temp.menuMain
+      32 < temp.menuMain
     }
     footer  < styles.content.get
     footer {
