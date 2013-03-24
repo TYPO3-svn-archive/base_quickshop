@@ -165,27 +165,21 @@ temp.body {
         imageLinkWrap {
           enable = 1
           typolink {
-            parameter = {$plugin.quick_shop.pages.root}
+            parameter = {$plugin.quick_shop.pages.shop}
             title.data = LLL:EXT:base_quickshop/locallang_db.xml:headerimageLinkTitle
           }
         }
       }
         // Caddy mini
-      20 = COA
+      20 < styles.content.get
       20 {
-        if {
-          isTrue = 0
-        }
-        10  < styles.content.get
-        10 {
-          select.pidInList = {$plugin.caddy.pages.caddymini}
-        }
+        select.pidInList = {$plugin.caddy.pages.caddymini}
       }
         // Root page
       30 = HMENU
       30 {
         special = list
-        special.value = {$plugin.quick_shop.pages.root}
+        special.value = {$plugin.quick_shop.pages.shop}
         1 < temp.tmenu
       }
         // Space
