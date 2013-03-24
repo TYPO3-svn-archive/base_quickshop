@@ -170,6 +170,7 @@ temp.body {
           }
         }
       }
+        // Caddy mini
       20  < styles.content.get
       20 {
         select.pidInList = {$plugin.caddy.pages.caddymini}
