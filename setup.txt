@@ -171,9 +171,15 @@ temp.body {
         }
       }
         // Caddy mini
-      20  < styles.content.get
+      20 = COA
       20 {
-        select.pidInList = {$plugin.caddy.pages.caddymini}
+        if {
+          isTrue = 0
+        }
+        10  < styles.content.get
+        10 {
+          select.pidInList = {$plugin.caddy.pages.caddymini}
+        }
       }
         // Root page
       30 = HMENU
