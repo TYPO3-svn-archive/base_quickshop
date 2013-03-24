@@ -146,6 +146,7 @@ temp.body {
     content < styles.content.get
     menue = COA
     menue {
+        // Logo
       10 = IMAGE
       10 {
         file {
@@ -169,12 +170,14 @@ temp.body {
           }
         }
       }
+        // Root page
       20 = HMENU
       20 {
         special = list
         special.value = {$plugin.quick_shop.pages.root}
         1 < temp.tmenu
       }
+        // Space
       21 = TEXT
       21 {
         value (
@@ -185,6 +188,7 @@ temp.body {
           </ul>
         )
       }
+        // Menu
       22 < temp.menuMain
     }
     footer  < styles.content.get
