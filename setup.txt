@@ -61,8 +61,6 @@ temp.tmenu {
     stdWrap {
       htmlSpecialChars = 1
     }
-    additionalParams = &test=1
-
   }
   CUR = 1
   CUR.wrapItemAndSub (
