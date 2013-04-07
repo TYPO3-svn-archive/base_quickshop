@@ -11,6 +11,7 @@
   // temp.body
   // config
   // tt_content.table
+  // page
   // page - SEO
   // globals: page - SEO
 
@@ -255,7 +256,7 @@ tt_content.table.20.stdWrap {
 
   ///////////////////////////////////////////
   //
-  // page - SEO
+  // page
 
 page = PAGE
 page {
@@ -284,6 +285,45 @@ page {
       ifEmpty {
         data = LLL:EXT:base_quickshop/locallang_db.xml:metaDescription
       }
+    }
+  }
+
+  bodyTag = <body>
+  10 < temp.body
+}
+  // page
+
+
+
+  ///////////////////////////////////////////
+  //
+  // page - SEO
+
+page {
+  config {
+    noPageTitle = 2
+  }
+  headerData {
+    20 = TEXT
+    20 {
+      data  = register:browser_htmlTitleTag
+      ifEmpty {
+        field = title
+      }
+      wrap  = <title>|</title>      
+    }
+  }
+  meta {
+    author {
+      data = LLL:EXT:base_quickshop/locallang_db.xml:metaAuthor
+    }
+    description {
+      field >
+      data  = register:browser_description
+    }
+    keywords {
+      field >
+      data  = register:browser_keywords
     }
   }
 
