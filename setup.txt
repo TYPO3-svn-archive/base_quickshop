@@ -290,3 +290,41 @@ page {
   10 < temp.body
 }
   // page
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // globals: page - SEO
+
+  //    showUid
+
+[globalVar = GP:tx_browser_pi1|showUid > 0]
+  page {
+    config {
+      noPageTitle = 2
+    }
+    headerData {
+      20 = TEXT
+      20 {
+        data = register:browser_htmlTitleTag
+        ifEmpty {
+          field = title
+          noTrimWrap  = |TYPO3 Quick Shop: ||
+        }
+        wrap = <title>|</title>
+      }
+    }
+    meta {
+      description {
+        field >
+        data = register:browser_description
+      }
+      keywords {
+        field >
+        data = register:browser_keywords
+      }
+    }
+  }
+[global]
+  // globals: page - SEO
