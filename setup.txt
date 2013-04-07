@@ -4,13 +4,14 @@
   // INDEX
   //
   // plugin.tx_automaketemplate_pi1
+  // plugin.tx_browser_pi1 - SEO
   // temp.tmenu
   // temp.menuMain
   // temp.head
   // temp.body
   // config
   // tt_content.table
-  // page
+  // page - SEO
 
 
 
@@ -37,6 +38,41 @@ plugin.tx_automaketemplate_pi1 {
   relPathPrefix = {$plugin.base_quickshop.paths.res}
 }
   // plugin.tx_automaketemplate_pi1
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1 - SEO
+
+plugin.tx_browser_pi1 {
+
+  general_stdWrap >
+
+  displayList {
+    seo {
+      htmlHead {
+      title = 1
+        meta {
+          description = 1
+          keywords    = 1
+        }
+      }
+    }
+  }
+  displaySingle {
+    seo {
+      htmlHead {
+      title = 1
+        meta {
+          description = 1
+          keywords    = 1
+        }
+      }
+    }
+  }
+}
+  // plugin.tx_browser_pi1 - SEO
 
 
 
@@ -253,7 +289,7 @@ tt_content.table.20.stdWrap {
 
   ///////////////////////////////////////////
   //
-  // page
+  // page - SEO
 
 page = PAGE
 page {
@@ -288,4 +324,43 @@ page {
   bodyTag = <body>
   10 < temp.body
 }
-  // page
+  // page - SEO
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // globals: page - SEO
+
+  //    showUid
+
+[globalVar = GP:tx_browser_pi1|showUid > 0]
+  page {
+    config {
+      noPageTitle = 2
+    }
+    headerData {
+      20 = TEXT
+      20 {
+        data = register:browser_htmlTitleTag
+        ifEmpty {
+          field = title
+          noTrimWrap  = |TYPO3 Quick Shop: ||
+        }
+        wrap = <title>|</title>
+      }
+    }
+    meta {
+      description {
+        field >
+        data = register:browser_description
+      }
+      keywords {
+        field >
+        data = register:browser_keywords
+      }
+    }
+  }
+[global]
+  // globals: page - SEO
+
