@@ -49,14 +49,21 @@ temp.tmenu = TMENU
 temp.tmenu {
 
   NO = 1
-  NO.wrapItemAndSub (
+  NO {
+    wrapItemAndSub (
             <li class="no">
               |
             </li>
-  )
-  NO.ATagTitle.field = title
-  NO.stdWrap.htmlSpecialChars = 1
+)
+    ATagTitle {
+      field = title
+    }
+    stdWrap {
+      htmlSpecialChars = 1
+    }
+    additionalParams = &test=1
 
+  }
   CUR = 1
   CUR.wrapItemAndSub (
             <li class="cur">
