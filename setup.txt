@@ -12,6 +12,7 @@
   // config
   // tt_content.table
   // page - SEO
+  // globals: page - SEO
 
 
 
@@ -38,41 +39,6 @@ plugin.tx_automaketemplate_pi1 {
   relPathPrefix = {$plugin.base_quickshop.paths.res}
 }
   // plugin.tx_automaketemplate_pi1
-
-
-
-  ////////////////////////////////////////////////////////////////////////////////
-  //
-  // plugin.tx_browser_pi1 - SEO
-
-plugin.tx_browser_pi1 {
-
-  general_stdWrap >
-
-  displayList {
-    seo {
-      htmlHead {
-      title = 1
-        meta {
-          description = 1
-          keywords    = 1
-        }
-      }
-    }
-  }
-  displaySingle {
-    seo {
-      htmlHead {
-      title = 1
-        meta {
-          description = 1
-          keywords    = 1
-        }
-      }
-    }
-  }
-}
-  // plugin.tx_browser_pi1 - SEO
 
 
 
