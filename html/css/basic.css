@@ -98,7 +98,7 @@ a:hover {
 * wraps */
 
 #wrap-outer {
-  background: transparent url(background/typo3_netzmacher_background.png) scroll center repeat;
+  background: transparent url("background/typo3_netzmacher_background.png") scroll center repeat;
   min-height: 98%;
   padding-top: 2%;
 }
