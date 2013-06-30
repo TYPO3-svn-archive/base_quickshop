@@ -110,6 +110,9 @@ a:hover {
   min-height: 100%;
   position: relative;
   width: 1000px;
+    -moz-box-box-shadow: 5px 5px 25px #222;
+    -webkit-box-shadow: 5px 5px 25px #222;
+    box-shadow: 5px 5px 25px #222;
 }
 
 #wrap-vertical {
