@@ -45,7 +45,7 @@ input[type="text"], textarea, select {
 * html, body, a, h1-3, .cb */
 
 html {
-  height: 100%;       /* For FF and Opera: background-image will centered vertically */
+/*  height: 100%;        For FF and Opera: background-image will centered vertically */
   overflow-y: scroll; /* There is a scroll-bar in any case */
 }
 body {
