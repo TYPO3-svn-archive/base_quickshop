@@ -33,10 +33,6 @@ ul ul, ol ol {
 form, pre {
   margin: 1em 0;
 }
-input[type="text"], textarea, select {
-  background-color: #fff;
-  border: 1px solid rgb(102,102,102);
-}
 /* reset */
 
 
