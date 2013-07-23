@@ -32,6 +32,10 @@ ul ul, ol ol {
 form, pre {
   margin: 1em 0;
 }
+legend {
+  border: none;
+}
+
 /* reset */
 
 
