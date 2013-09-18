@@ -137,7 +137,7 @@ a:hover {
 *
 * elements */
 
-#header {
+#headerBak {
   background:#f66800;
 /*  border-bottom:1px solid white;*/
   color: white;
@@ -148,6 +148,40 @@ a:hover {
   top: 0;
   width:210px;
 }
+#header {
+/*    background-color: rgb(236,146,26); */
+    color: #fff;
+/*    #00001, 120902, dwildt, 1- */
+/*    padding: 150px 0 0;*/
+/*    #00002, 121001, dwildt, 3- */
+/*    left: 0;
+    position: absolute;
+    top: 0; */
+    width: 1000px;
+}
+  #wrap-slider-logo {
+      height: 130px;
+  /* 121001, dwildt, 1- */
+  /*    overflow: hidden;*/
+      position:relative;
+  }
+    /*#00001, 120902, dwildt+*/
+    #header-logo {
+        background-color: #F79210;
+        float: right;
+        height: 116px;
+/*        margin-left: -5px;*/
+        padding: 14px 20px 0 21px;
+        width: 191px;
+    }
+    /*#00001, 120902, dwildt+*/
+    #header-slider {
+        background-color: #F79210;
+        height:130px;
+        overflow: hidden;
+        width: 768px;
+    }
+    /*#00002, 121001, dwildt+*/
 
 #content {
   float:left;
