@@ -218,6 +218,7 @@ temp.body {
           }
         }
       }
+      10 >
         // Caddy mini
       20 < styles.content.get
       20 {
