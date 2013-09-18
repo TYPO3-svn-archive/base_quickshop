@@ -17,25 +17,42 @@ styles {
 }
 
 plugin.base_quickshop {
-  # cat=Quick Shop template - dims//201; type=integer; label= Header image max height:max height for the header image in pixel
+  # cat=Quick Shop Template - dims//201; type=integer; label= Header image max height:max height for the header image in pixel
   dims.headerimage.maxH = 420
-  # cat=Quick Shop template - dims//201; type=integer; label= Header image max width:max width for the header image in pixel
+  # cat=Quick Shop Template - dims//201; type=integer; label= Header image max width:max width for the header image in pixel
   dims.headerimage.maxW = 210
 
-  # cat=Quick Shop template - host//101; type=string; label= Domain:Domain of the current Quick Shop installation. With protocol and ending slash. I.e: http://typo3-quick-shop.de/
+  # cat=Quick Shop Template - host//101; type=string; label= Domain:Domain of the current Quick Shop installation. With protocol and ending slash. I.e: http://typo3-quick-shop.de/
   basic.host = 
 
-  # cat=Quick Shop template - pages//202; type=integer; label= Page header:Uid of the header page, the page which contains the content for the header.
-  pages.library.header = 
-  # cat=Quick Shop template - pages//203; type=integer; label= Page footer:Uid of the footer page, the page which contains the content for the footer.
-  pages.library.footer = 
+  # cat=Quick Shop Template - Pages*//100;   type=+int;   label= Root page*: *Obligate! Uid of the root page
+  pages.root                        = 100000
+  # cat=Quick Shop Template - Pages*//101;   type=+int;   label= Logo*: *Obligate! Uid of the page or directory, which contains the content element with the header logo
+  pages.root.libraries.header.logo  = 100000
+  # cat=Quick Shop Template - Pages*//102;   type=+int;   label= Footer*: *Obligate! Uid of the page or directory, which contains the content element with the footer
+  pages.root.libraries.footer       = 100000
+  # cat=Quick Shop Template - Pages*//103;   type=+int;   label= Menu Bottom: Uid of the page or directory, which contains the content element for the bottom of the menu column
+  pages.root.libraries.menu.bottom  = 100000 
+  # cat=Quick Shop Template - Pages*//104;   type=+int;   label= Slider Content*: *Obligate! Uid of the page, which contains the content element for the header slider 
+  pages.root.libraries.header.slider.content  = 100000 
 
-  # cat=Quick Shop template - paths//301; type=string; label=CSS:Path to your CSS file.
+  # cat=Quick Shop Template - paths//101; type=string; label=CSS:Path to your CSS file.
   paths.css = EXT:base_quickshop/res/html/css/basic.css 
-  # cat=Quick Shop template - paths//302; type=string; label=Favicon:Path to your favicon.
+  # cat=Quick Shop Template - paths//102; type=string; label=Favicon:Path to your favicon.
   paths.favicon = EXT:base_quickshop/res/images/favicon.ico
-  # cat=Quick Shop template - paths//303; type=string; label=HTML:Path to your HTML template.
+  # cat=Quick Shop Template - paths//103; type=string; label=HTML:Path to your HTML template.
   paths.html = EXT:base_quickshop/res/html/index.html
-  # cat=Quick Shop template - paths//304; type=string; label=Ressources:Path to your directory with ressources
+  # cat=Quick Shop Template - paths//104; type=string; label=Ressources:Path to your directory with ressources
   paths.res = EXT:base_quickshop/res/
+  # cat=Quick Shop Template - paths//105;   type=string;   label= Slider CSS: Path to the slider css file
+  paths.slider.css    = EXT:base_quickshop/res/jQuery/fadeSlideShow/fadeSlideShow.css
+  # cat=Quick Shop Template - paths//106;   type=string;   label= Slider jQuery: Path to jQuery slider
+  paths.slider.jQuery = EXT:base_quickshop/res/jQuery/fadeSlideShow/fadeSlideShow.js
+
+  # cat=Quick Shop Template - Slider//100;   type=+int;   label= Columns position: Columns position of your slider plugin. 0: normal, 1: left, 2:right, 3: marginal
+  slider.colpos        =
+  # cat=Quick Shop Template - Slider//101;   type=+int;   label= Maximum Image Height: The maximum height of images in the slider
+  slider.maxImageHeight = 130
+  # cat=Quick Shop Template - Slider//102;   type=+int;   label= Maximum Image Width: The maximum width of images in the slider 
+  slider.maxImageWidth = 770
 }

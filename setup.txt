@@ -137,6 +137,46 @@ temp.head {
 
   //////////////////////////////////////////////
   // 
+  // temp.header
+
+temp.header {
+  header-logo = CONTENT
+  header-logo {
+    table = tt_content
+    select {
+      pidInList = {$plugin.base_quickshop.pages.root.libraries.header.logo}
+      orderBy   = sorting
+      max       = 1
+      colPos    = 0
+    }
+  }
+  header-slider = COA
+  header-slider {
+      // maxImageWidth
+    10 = LOAD_REGISTER
+    10 {
+      maxImageWidth = {$plugin.base_quickshop.slider.maxImageWidth}
+    }
+      // Slider: content
+    20 = COA
+    20 {
+      10 < styles.content.get
+      10 {
+        select {
+          pidInList = {$plugin.base_quickshop.pages.root.libraries.header.slider.content}
+        }
+      }
+      wrap = <div id="slideshow">|</div>
+    }
+    30 = RESTORE_REGISTER
+  }
+}
+  // temp.header
+
+
+
+  //////////////////////////////////////////////
+  // 
   // temp.body
 
 temp.body = TEMPLATE
@@ -145,10 +185,12 @@ temp.body {
   workOnSubpart = DOCUMENT_BODY
 
   subparts {
-    header  < styles.content.get
-    header {
-      select.pidInList = {$plugin.base_quickshop.pages.library.header}
-    }
+    //header  < styles.content.get
+    //header {
+    //  select.pidInList = {$plugin.base_quickshop.pages.library.header}
+    //}
+    header-logo   < temp.header.header-logo
+    header-slider < temp.header.header-slider
     content < styles.content.get
     menue = COA
     menue {
@@ -293,6 +335,42 @@ page {
 
   bodyTag = <body>
   10 < temp.body
+
+  includeCSS {
+    fadeSlideShow = {$plugin.base_quickshop.paths.slider.css}
+  }
+  includeJSFooter {
+    fadeSlideShow = {$plugin.base_quickshop.paths.slider.jQuery}
+  }
+  jsFooterInline {
+      // jQuery for the slideshow
+    52111 = TEXT
+    52111 {
+      value (
+        jQuery(document).ready(function(){
+          jQuery('#slideshow').fadeSlideShow({
+            width             : {$plugin.base_quickshop.slider.maxImageWidth}, // Weite der SlideShow
+            height            : {$plugin.base_quickshop.slider.maxImageHeight}, // Höhe der Slideshow
+            speed             : 'slow',           // Animationsgeschwindigkeit
+            interval          : 6000,             // Zeit zwischen Bildwechsel 1000 = 1 Sekunde
+            PlayPauseElement  : 'fssPlayPause',   // ID für Play / Pause Element
+            PlayText          : 'Start',          // Play Text
+            PauseText         : 'Stop',           // Pause Text
+            NextElement       : 'fssNext',        // ID für den weiter Button
+            NextElementText   : 'Next >',         // Text für den weiter Button
+            PrevElement       : 'fssPrev',        // ID für den zurück Button
+            PrevElementText   : '< Prev',         // Text für den zurück Button
+            ListElement       : 'fssList',        // ID für die Bilder-Liste
+            ListLi            : 'fssLi',          // Klasse für LI-Elemente in der Bilder-Liste
+            ListLiActive      : 'fssActive',      // Klasse für aktives Element in der Bilder-Liste
+            addListToId       : false,            // Bilder-Liste in ein HTML Element mit der ID ... einfügen
+            allowKeyboardCtrl : false,            // Keyboardsteuerung verbieten (Konflikt mit Formularen: Leerzeichen)
+            autoplay          : true              // Autoplay an
+          });
+        });
+)
+    }
+  }
 }
   // page
 
