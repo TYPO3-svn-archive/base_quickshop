@@ -177,6 +177,8 @@ a:hover {
     /*#00001, 120902, dwildt+*/
     #header-slider {
         background-color: #F79210;
+        background-image:url("background/typo3_slider_w770px_h130px.png");
+        background-repeat:repeat-y;
         height:130px;
         overflow: hidden;
         width: 768px;
