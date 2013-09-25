@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+  <meta type="array">
+    <type>database</type>
+    <description>Language labels for database tables/fields belonging to extension 'base_quickshop'</description>
+  </meta>
+  <data type="array">
+    <languageKey index="default" type="array">
+      <label index="headerimageLinkTitle">Quick Shop</label>
+      <label index="metaAuthor">TYPO3 Quick Shop - developed by http://die-netzmacher.de</label>
+      <label index="metaDescription">Quick Shop, the fastest shop in the history of TYPO3. Install the complete online shop with one click!</label>
+      <label index="metaKeywords">TYPO3, Quick Shop, Shop</label>
+    </languageKey>
+    <languageKey index="de" type="array">
+      <label index="headerimageLinkTitle">Quick Shop</label>
+      <label index="metaAuthor">TYPO3 Quick Shop - entwickelt von http://die-netzmacher.de</label>
+      <label index="metaDescription">Quick Shop, der schnellste Shop in der Geschichte von TYPO3. Installiere den kompletten Online-Shop mit einem Klick!</label>
+      <label index="metaKeywords">TYPO3, Quick Shop, Shop, Online-Shop</label>
+    </languageKey>
+  </data>
+</T3locallang>
