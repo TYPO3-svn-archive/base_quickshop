@@ -1,0 +1,315 @@
+DELTA
+=====
+* Without tax reduced
+* Without options
+
+VERSION
+=======
+2.0.0: 13-03-08
+
+INDEX
+=====
+
+* CADDY
+  * CONTENT
+    * ITEM
+
+* CADDY_ITEM_ERROR
+* CADDY_PAYMENT
+* CADDY_PAYMENT_CONDITIONS
+* CADDY_SHIPPING
+* CADDY_SHIPPING_CONDITIONS
+* CADDY_SPECIALS
+* CADDY_SPECIALS_CONDITIONS
+
+* CADDY_EMPTY
+
+* CADDY_MINPRICE
+
+* CADDY_EMAIL
+* CADDY_EMAILDELIVERY
+
+* CADDY_FORM 
+
+* CADDYMINI 
+* CADDYMINIEMPTY 
+
+
+<!-- ###CADDY### begin --> 
+<div class="caddy">
+  ###MINPRICE###
+  <form name="cart" id="cart" action="###TARGET###" method="post">
+    ###VARIANTS###
+    <div class="caddy_header">
+      <div class="caddy_col caddy_col1">###_LOCAL_LANG_QTY###</div>
+      <div class="caddy_col caddy_col2">###_LOCAL_LANG_SKU###</div>
+      <div class="caddy_col caddy_col3">###_LOCAL_LANG_ITEM###</div>
+      <div class="caddy_col caddy_col4">###_LOCAL_LANG_NET###</div>
+      <div class="caddy_col caddy_col5">###_LOCAL_LANG_SUM###</div>
+      <div class="caddy_col caddy_col6">###_LOCAL_LANG_TABLEHEADERDELETE###</div>
+      <div class="caddy_cleaner"></div>
+    </div>
+    <!-- ###CONTENT### -->
+    <!-- ###ITEM### -->
+    <div class="caddy_product">
+      <div class="caddy_col caddy_col1">
+        <input  type="text" value="###QTY###" name="###QTY_NAME###" onchange="this.form.submit()" />
+      </div>
+      <div class="caddy_col caddy_col2">###SKU###</div>
+      <div class="caddy_col caddy_col3">###TITLE###</div>
+      <div class="caddy_col caddy_col4">###NET###</div>
+      <div class="caddy_col caddy_col5">###SUMNET###</div>
+      <div class="caddy_col caddy_col6">###DELETE###</div>
+      <div class="caddy_cleaner"></div>
+      ###ITEM_ERROR###
+    </div>
+    <!-- ###ITEM### -->
+    <!-- ###CONTENT### -->
+    <div class="caddy_footer">                        
+      <div class="caddy_col caddy_col1 caddy_col_strong">#</div>
+      <div class="caddy_col caddy_col2_4 caddy_col_strong">###_LOCAL_LANG_ITEMSSUMNET###</div>
+      <div class="caddy_col caddy_col5 caddy_col_strong">###SUMITEMSNET###</div>
+      <div class="caddy_cleaner"></div>
+      <div class="caddy_col caddy_col1">+</div>
+      <div class="caddy_col caddy_col2_4">###_LOCAL_LANG_TAX### (###TAXRATE_NORMAL_STRING###)</div>
+      <div class="caddy_col caddy_col5">###SUMSUMTAXSUM###</div>
+      <div class="caddy_cleaner"></div>
+      <div class="caddy_col caddy_col1 caddy_col_strong">#</div>
+      <div class="caddy_col caddy_col2_4 caddy_col_strong">###_LOCAL_LANG_SUMGROSS###</div>
+      <div class="caddy_col caddy_col5 caddy_col_strong">###SUMSUMGROSS###</div>
+      <div class="caddy_cleaner"></div>
+    </div>
+  </form>
+  ###_HTMLMARKER_LINKTOSHOP###
+  <div class="caddy_cleaner"></div>
+</div>
+<!-- ###CADDY### end -->
+
+
+<!-- ###CADDY_ITEM_ERROR### begin -->
+      <div class="caddy_error">###ERROR_PROMPT###</div>
+<!-- ###CADDY_ITEM_ERROR### end -->
+
+
+<!-- ###CADDY_PAYMENT### begin -->
+<div id="caddy_payment">
+  <fieldset>
+    <legend>###_LOCAL_LANG_PAYMENTLABEL###</legend>
+    <!-- ###CONTENT### --><!-- ###ITEM### -->
+    <div class="caddy_fieldwrap_radio">###PAYMENT_RADIO### ###PAYMENT_TITLE### ###PAYMENT_CONDITION###</div>
+    <!-- ###ITEM### --><!-- ###CONTENT### -->
+  </fieldset>
+</div>
+<!-- ###CADDY_PAYMENT### end -->
+
+
+<!-- ###CADDY_PAYMENT_CONDITIONS### begin -->
+<ul class="caddy_payment_conditions">
+  <!-- ###CONTENT### --><!-- ###ITEM### -->
+  <li>###CONDITION###</li>
+  <!-- ###ITEM### --><!-- ###CONTENT### -->
+</ul>
+<!-- ###CADDY_PAYMENT_CONDITIONS### end -->
+
+
+<!-- ###CADDY_SHIPPING### begin -->
+<div id="caddy_shipping">
+  <fieldset>
+    <legend>###_LOCAL_LANG_SHIPPINGLABEL###</legend>
+    <!-- ###CONTENT### --><!-- ###ITEM### -->
+    <div class="caddy_fieldwrap_radio">###SHIPPING_RADIO### ###SHIPPING_TITLE### ###SHIPPING_CONDITION###</div>
+    <!-- ###ITEM### --><!-- ###CONTENT### -->
+  </fieldset>
+</div>
+<!-- ###CADDY_SHIPPING### end -->
+
+
+<!-- ###CADDY_SHIPPING_CONDITIONS### begin -->
+<ul class="caddy_shipping_conditions">
+  <!-- ###CONTENT### --><!-- ###ITEM### -->
+  <li>###CONDITION###</li>
+  <!-- ###ITEM### --><!-- ###CONTENT### -->
+</ul>
+<!-- ###CADDY_SHIPPING_CONDITIONS### end -->
+
+
+<!-- ###CADDY_SPECIALS### begin -->
+<div id="caddy_specials">
+  <fieldset>
+    <legend>###_LOCAL_LANG_SPECIALSLABELS###</legend>
+    <!-- ###CONTENT### --><!-- ###ITEM### -->
+    <div class="caddy_fieldwrap_checkbox">###SPECIALS_CHECKBOX### ###SPECIALS_TITLE### ###SPECIALS_CONDITION###</div>
+    <!-- ###ITEM### --><!-- ###CONTENT### -->
+  </fieldset>
+</div>
+<!-- ###CADDY_SPECIALS### end -->
+
+
+<!-- ###CADDY_SPECIALS_CONDITIONS### begin -->
+<ul class="caddy_specials_conditions">
+  <!-- ###CONTENT### --><!-- ###ITEM### -->
+  <li>###CONDITION###</li>
+  <!-- ###ITEM### --><!-- ###CONTENT### -->
+</ul>
+<!-- ###CADDY_SPECIALS_CONDITIONS### end -->
+
+
+<!-- ###CADDY_EMPTY### begin -->
+<div class="caddy caddyempty">
+  <div class="empty">
+    ###_LOCAL_LANG_CADDYEMPTY###
+  </div>
+  ###_HTMLMARKER_LINKTOSHOP###
+  <div class="caddy_cleaner"></div>
+</div>
+
+<!-- ###CADDY_EMPTY### end -->
+
+
+<!-- ###CADDY_MINPRICE### begin -->
+<div class="caddy_mincart caddy_error">###ERROR_MINPRICE###</div>
+<!-- ###CADDY_MINPRICE### end -->
+
+
+<!-- ###CADDY_EMAIL### begin -->
+<table border="###BORDER###" cellpadding="###CELLPADDING###" cellspacing="###CELLSPACING###">
+  <tr style="font-weight: bold;">
+    <td>
+      ###_LOCAL_LANG_QTY###
+    </td>
+    <td>
+      ###_LOCAL_LANG_SKU###
+    </td>
+    <td>
+      ###_LOCAL_LANG_ITEM###
+    </td>
+    <td style="text-align:right">
+      ###_LOCAL_LANG_NET###
+    </td>
+    <td style="text-align:right">
+      ###_LOCAL_LANG_SUM###
+    </td>
+  </tr>
+  <!-- ###CONTENT### -->
+  <!-- ###ITEM### -->
+  <tr>
+    <td style="text-align:right">
+      ###QTY###
+    </td>
+    <td>
+      ###SKU###
+    </td>
+    <td>
+      ###TITLE###
+    </td>
+    <td style="text-align:right">
+      ###NET###
+    </td>
+    <td style="text-align:right">
+      ###SUMNET###
+    </td>
+  </tr>
+  <!-- ###ITEM### -->
+  <!-- ###CONTENT### -->
+  <tr style="font-weight: bold;">
+    <td style="text-align:center">
+      #
+    </td>
+    <td colspan="3">
+      ###_LOCAL_LANG_ITEMSSUMNET###
+    </td>
+    <td style="text-align:right">
+      ###SUMITEMSNET###
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      +
+    </td>
+    <td colspan="3">
+      ###_LOCAL_LANG_TAX### (###TAXRATE_NORMAL_STRING###)
+    </td>
+    <td style="text-align:right">
+      ###SUMSUMTAXSUM###
+    </td>
+  </tr>
+  <tr style="font-weight: bold;">
+    <td style="text-align:center">
+      #
+    </td>
+    <td colspan="3">
+      ###_LOCAL_LANG_SUMGROSS###
+    </td>
+    <td style="text-align:right">
+      ###SUMSUMGROSS###
+    </td>
+  </tr>
+</table>
+<br />
+<!-- ###CADDY_EMAIL### end -->
+
+<!-- ###CADDY_EMAILDELIVERY### begin -->
+<table border="###BORDER###" cellpadding="###CELLPADDING###" cellspacing="###CELLSPACING###">
+  <tr style="font-weight: bold;">
+    <td>
+      ###_LOCAL_LANG_QTY###
+    </td>
+    <td>
+      ###_LOCAL_LANG_SKU###
+    </td>
+    <td>
+      ###_LOCAL_LANG_ITEM###
+    </td>
+  </tr>
+  <!-- ###CONTENT### -->
+  <!-- ###ITEM### -->
+  <tr>
+    <td style="text-align:right">
+      ###QTY###
+    </td>
+    <td>
+      ###SKU###
+    </td>
+    <td>
+      ###TITLE###
+    </td>
+  </tr>
+  <!-- ###ITEM### -->
+  <!-- ###CONTENT### -->
+</table>
+<br />
+<!-- ###CADDY_EMAILDELIVERY### end -->
+
+
+
+<!-- ###CADDY_FORM### begin --> 
+<div class="caddy_form">
+  <form action="###CADDY_FORM_ACTION###">
+    <input type="hidden" value="###CADDY_FORM_CONTENTUID###" name="cid">
+    <input type="hidden" value="###CADDY_FORM_ACTION_PID###" name="id">
+    <input type="text" value="1" name="qty">
+    <input type="submit" value="###_LOCAL_LANG_FORM_SUBMIT###">
+  </form>
+</div>
+<!-- ###CADDY_FORM### end -->
+
+
+<!-- ###CADDYMINI### begin --> 
+<div class="caddymini">
+  <!-- ###ITEMS### beginn -->
+    ###ITEM###
+  <!-- ###ITEMS### end -->
+  ###SUM###
+  ###_HTMLMARKER_LINKTOCADDY###
+</div>
+<!-- ###CADDYMINI### end -->
+
+
+<!-- ###CADDYMINIEMPTY### begin --> 
+<div class="caddymini caddyminiempty">
+  <div class="empty">
+    ###_LOCAL_LANG_CADDYMINIEMPTY###
+  </div>
+  ###_HTMLMARKER_LINKTOSHOP###
+</div>
+<!-- ###CADDYMINIEMPTY### end -->
