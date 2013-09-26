@@ -247,7 +247,7 @@ temp.body {
     }
     footer  < styles.content.get
     footer {
-      select.pidInList = {$plugin.base_quickshop.pages.library.footer}
+      select.pidInList = {$plugin.base_quickshop.pages.root.libraries.footer}
     }
   }
 }
