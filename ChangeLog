@@ -1,5 +1,12 @@
+3.0.5
+  2013-09-26
+  Improvement
+  * #i0008: TypoScript menu
+  * #i0007: Update manual
+
 3.0.4
   2013-09-18
+  Feature
   * #52111: Integration of JSS slider script
             Effected files:
             * res

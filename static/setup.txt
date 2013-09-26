@@ -194,56 +194,46 @@ temp.body {
     content < styles.content.get
     menue = COA
     menue {
-        // Logo
-      10 = IMAGE
-      10 {
-        file {
-          import = uploads/media/
-          import {
-            field   = media
-            listNum = 0
-            override {
-              data = levelmedia: -1, slide
-            }
-          }
-          maxW = {$plugin.base_quickshop.dims.headerimage.maxW}
-          maxH = {$plugin.base_quickshop.dims.headerimage.maxH}
-        }
-        imageLinkWrap = 1
-        imageLinkWrap {
-          enable = 1
-          typolink {
-            parameter = {$plugin.quick_shop.pages.shop}
-            title.data = LLL:EXT:base_quickshop/locallang_db.xml:headerimageLinkTitle
-          }
-        }
-      }
-      10 >
         // Caddy mini
-      20 < styles.content.get
-      20 {
+      10 < styles.content.get
+      10 {
         select.pidInList = {$plugin.caddy.pages.caddymini}
       }
-        // Root page
-      30 = HMENU
+        // menu
+      30 = COA
       30 {
-        special = list
-        special.value = {$plugin.quick_shop.pages.shop}
-        1 < temp.tmenu
+          // root page
+        10 = HMENU
+        10 {
+          special = list
+          special.value = {$plugin.quick_shop.pages.shop}
+          1 < temp.tmenu
+        }
+          // space
+        20 = TEXT
+        20 {
+          value (
+            <ul>
+              <li class="spc">
+                &nbsp;
+              </li>
+            </ul>
+          )
+        }
+          // 1st level
+        30 < temp.menuMain
       }
-        // Space
-      31 = TEXT
-      31 {
-        value (
-          <ul>
-            <li class="spc">
-              &nbsp;
-            </li>
-          </ul>
-        )
+        // Menu bottom
+      90 = CONTENT
+      90 {
+        table = tt_content
+        select {
+          pidInList = {$plugin.base_quickshop.pages.root.libraries.menu.bottom}
+          orderBy   = sorting
+          //max       = 1
+          //colPos    = 0
+        }
       }
-        // Menu
-      32 < temp.menuMain
     }
     footer  < styles.content.get
     footer {

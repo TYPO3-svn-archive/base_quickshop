@@ -12,7 +12,9 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Quick-Shop - Template',
-	'description' => 'Basic Template for TYPO3 - espacially for the extension Quick Shop (quick_shop)',
+	'description' =>  'Quick Shop Template is a template especially for the extension Quick Shop. ' .
+                          'You can use this template for any other TYPO3 website too. ' .
+                          'The template will installed automatically by the Quick Shop Installer (quickshop_installer).',
 	'category' => 'templates',
 	'author' => 'Dirk Wildt - Die Netzmacher',
 	'author_email' => 'http://wildt.at.die-netzmacher.de',
@@ -29,7 +31,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '3.0.3',
+	'version' => '3.0.5',
 	'constraints' => array(
 		'depends' => array(
 			'automaketemplate' => '',
