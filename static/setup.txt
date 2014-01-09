@@ -304,24 +304,6 @@ page {
   includeCSS {
     styles = {$plugin.base_quickshop.paths.css}
   }  
-  meta {
-    author {
-      data = LLL:EXT:base_quickshop/locallang_db.xml:metaAuthor
-    }
-    keywords {
-      field = keywords
-      ifEmpty {
-        data = LLL:EXT:base_quickshop/locallang_db.xml:metaKeywords
-      }
-      keywords = 1
-    }
-    description {
-      field = description
-      ifEmpty {
-        data = LLL:EXT:base_quickshop/locallang_db.xml:metaDescription
-      }
-    }
-  }
 
   bodyTag = <body>
   10 < temp.body
