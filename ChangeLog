@@ -1,3 +1,11 @@
+3.1.0
+  2014-01-09
+  Features
+  * #54872: SEO: move support from Browser - TYPO3 without PHP - to SEO Dynamic 2
+            * Remove 
+              * res/pages/01_rootpage/typoscript/constants.txt: myConst.client.seo 
+              * static/setup.txt: plugin.tx_browser_pi1 - SEO in setup.txt
+
 3.0.6
   2013-11-06
   Feature

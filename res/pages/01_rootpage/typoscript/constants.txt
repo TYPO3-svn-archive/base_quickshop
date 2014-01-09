@@ -2,14 +2,6 @@ myConst {
   host = http://quick-shop.typo3-browser-forum.de/
   client {
     name = Dirk Wildt
-    seo {
-      default {
-        // Default value for HTML head meta tag keywords
-        keywords    = TYPO3, Browser, Shop, Tutorial
-        // Default value for HTML head meta tag description
-        description = Tutorial: How to build a small shop with the browser, the TYPO3-frontend-engine
-      }
-    }
   }
   pages {
     root             =   1
