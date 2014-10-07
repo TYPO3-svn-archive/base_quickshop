@@ -170,6 +170,8 @@ page {
         {$plugin.base_quickshop.seo.description}
       )
     }
+      // Foundation
+    viewport = width=device-width, initial-scale=1.0
   }
 
   bodyTag = <body>
