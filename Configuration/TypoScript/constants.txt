@@ -1,0 +1,3 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:base_quickshop/Configuration/TypoScript/Constants/_constants.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:base_quickshop/Configuration/TypoScript/Setup/BaseQuickshop/Foundation/Components/constants.ts">
+

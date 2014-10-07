@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:base_quickshop/Configuration/TypoScript/Setup/_setup.ts">

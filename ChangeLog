@@ -1,9 +1,17 @@
+6.0.0
+  2014-10-04
+  Feature
+  * #62028: Upgrade TYPO3 6.2
+            * Browser 6.0
+            * Foundation 5.4
+            * TYPO3 6.2
+
 3.1.0
   2014-01-09
   Features
   * #54872: SEO: move support from Browser - TYPO3 without PHP - to SEO Dynamic 2
-            * Remove 
-              * res/pages/01_rootpage/typoscript/constants.txt: myConst.client.seo 
+            * Remove
+              * res/pages/01_rootpage/typoscript/constants.txt: myConst.client.seo
               * static/setup.txt
                 * page.meta.*
                 * plugin.tx_browser_pi1 - SEO in setup.txt
@@ -39,7 +47,7 @@
   * #i0006: Improve CSS
             * input is removed in basic.css
             * border: none; is removed in basic.css
-  
+
 3.0.2
   2013-06-30
   Improvements
@@ -60,14 +68,14 @@
             Effected files:
             * static/setup.txt
   * #i0004: Simplified HTML caddy
-            * without 
+            * without
               * options
               * tax reduced
             Effected files:
             * res/html/caddy/caddy_wo_options.html
   Improvement
   * #i0003: Improve CSS
-  
+
 3.0.0
   2013-03-21
   Improvement

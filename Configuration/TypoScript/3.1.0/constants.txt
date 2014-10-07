@@ -1,21 +1,3 @@
-PAGE_TARGET = _self
-
-content {
-  headerSpace = 0|0 
-  space       = 0|0
-}
-
-styles {
-  content {
-    imgtext {
-      maxW = 748
-      linkWrap {
-        width = 748
-      }
-    }
-  }
-}
-
 plugin.base_quickshop {
   # cat=Quick Shop Template - dims//201; type=integer; label= Header image max height:max height for the header image in pixel
   dims.headerimage.maxH = 420
@@ -23,7 +5,7 @@ plugin.base_quickshop {
   dims.headerimage.maxW = 210
 
   # cat=Quick Shop Template - host//101; type=string; label= Domain:Domain of the current Quick Shop installation. With protocol and ending slash. I.e: http://typo3-quick-shop.de/
-  basic.host = 
+  basic.host =
 
   # cat=Quick Shop Template - Pages*//100;   type=+int;   label= Root page*: *Obligate! Uid of the root page
   pages.root                        = 100000
@@ -32,16 +14,16 @@ plugin.base_quickshop {
   # cat=Quick Shop Template - Pages*//102;   type=+int;   label= Footer*: *Obligate! Uid of the page or directory, which contains the content element with the footer
   pages.root.libraries.footer       = 100000
   # cat=Quick Shop Template - Pages*//103;   type=+int;   label= Menu Bottom: Uid of the page or directory, which contains the content element for the bottom of the menu column
-  pages.root.libraries.menu.bottom  = 100000 
-  # cat=Quick Shop Template - Pages*//104;   type=+int;   label= Slider Content*: *Obligate! Uid of the page, which contains the content element for the header slider 
-  pages.root.libraries.header.slider.content  = 100000 
+  pages.root.libraries.menu.bottom  = 100000
+  # cat=Quick Shop Template - Pages*//104;   type=+int;   label= Slider Content*: *Obligate! Uid of the page, which contains the content element for the header slider
+  pages.root.libraries.header.slider.content  = 100000
 
   # cat=Quick Shop Template - paths//101; type=string; label=CSS:Path to your CSS file.
-  paths.css = EXT:base_quickshop/res/html/css/basic.css 
+  paths.css = EXT:base_quickshop/res/3.1.0/html/css/basic.css
   # cat=Quick Shop Template - paths//102; type=string; label=Favicon:Path to your favicon.
   paths.favicon = EXT:base_quickshop/res/images/favicon.ico
   # cat=Quick Shop Template - paths//103; type=string; label=HTML:Path to your HTML template.
-  paths.html = EXT:base_quickshop/res/html/index.html
+  paths.html = EXT:base_quickshop/res/3.1.0/html/index.html
   # cat=Quick Shop Template - paths//104; type=string; label=Ressources:Path to your directory with ressources
   paths.res = EXT:base_quickshop/res/
   # cat=Quick Shop Template - paths//105;   type=string;   label= Slider CSS: Path to the slider css file
@@ -53,6 +35,6 @@ plugin.base_quickshop {
   slider.colpos        =
   # cat=Quick Shop Template - Slider//101;   type=+int;   label= Maximum Image Height: The maximum height of images in the slider
   slider.maxImageHeight = 130
-  # cat=Quick Shop Template - Slider//102;   type=+int;   label= Maximum Image Width: The maximum width of images in the slider 
+  # cat=Quick Shop Template - Slider//102;   type=+int;   label= Maximum Image Width: The maximum width of images in the slider
   slider.maxImageWidth = 770
 }

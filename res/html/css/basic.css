@@ -1,55 +1,25 @@
 /*
-  reset
-  html, body, a, h1-3, .cb
+  html, body, a
   wraps
+  rows, columns
   elements
   tags
+  tx-browser-pi1
+  foundation
 */
 
 
 
 /**********************************
 *
-* reset */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-h1, h2, h3, h4, p, ul, ol, dl {
-  margin-bottom: 1em;
-}
-ul, ol {
-  margin-left: 1.2em;
-}
-ol {
-  padding-left: 2em;
-}
-ul ul, ol ol {
-  margin-bottom: 0;
-}
-
-form, pre {
-  margin: 1em 0;
-}
-fieldset, 
-legend {
-  border: none;
-}
-
-/* reset */
-
-
-/**********************************
-*
-* html, body, a, h1-3, .cb */
+* html, body, a */
 
 html {
-/*  height: 100%;        For FF and Opera: background-image will centered vertically */
-  overflow-y: scroll; /* There is a scroll-bar in any case */
+  height: auto; /* 140713, dwildt: foundation default is 100%. But than linear gradient doesn't scroll. */
 }
+
 body {
-  margin: 0 auto;
+
   background-color: rgb(114,112,111); /* Old browsers */
   background: -moz-linear-gradient(top, #444 0%, rgb(114,112,111) 50%, rgb(114,112,111) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444), color-stop(50%,#72706f), color-stop(100%,#72706f)); /* Chrome,Safari4+ */
@@ -59,17 +29,13 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#72706f',GradientType=0 ); /* IE6-9 */
   background: linear-gradient(top, #444 0%, rgb(114,112,111) 50%, rgb(114,112,111) 100%); /* W3C */
 
-  color: #333;
   font-family: 'DejaVu Sans Condensed', Trebuchet MS, Geneva, Arial, Helvetica, Verdana, sans-serif;
-  font-size: 81%;
-  -webkit-text-size-adjust: 81%;
-  -ms-text-size-adjust: 81%;
-
+  /*    font-size: 81%;
+      -webkit-text-size-adjust: 81%;
+      -ms-text-size-adjust: 81%;*/
+  margin: 0 auto;
   position: relative;
   width: 100%;
-}
-h1, h2, h3 {
-  font-size: 1em;
 }
 a {
   font-weight:bold;
@@ -83,15 +49,54 @@ a:visited {
 a:active,
 a:focus,
 a:hover {
-  color:#960000;
+  color:#8B0000;
 }
-.cb {
-  clear: both;
-  font-size:0px;
-}
-/* html, body, a, h1-3, .cb */
+/* html, body, a */
 
 
+
+/**********************************
+*
+* rows, columns */
+
+#rowheader, #rowfooter {
+  background-color: #F79210;
+  color: white;
+}
+#rowtopbar {
+  background-color: #333;
+  color: white;
+}
+#rowcenter {
+  background-color: #FFF;
+}
+
+#columnscontent {
+  padding-top:1em;
+}
+
+#columnsslider {
+  background-image:url("background/typo3_slider_w770px_h130px.png");
+  background-repeat:repeat-y;
+  height:130px;
+  overflow: hidden;
+}
+
+#columnsfooter {
+  padding:1em 0 .1em 0;
+  text-align:center;
+}
+
+
+.shadow {
+  margin: 0px auto;
+  max-width: 62.5rem;
+  width: 100%;
+  -moz-box-box-shadow: 0px 0px 15px #222;
+  -webkit-box-shadow: 0px 0px 15px #222;
+  box-shadow: 0px 0px 15px #222;
+}
+/* rows, columns */
 
 /**********************************
 *
@@ -99,35 +104,9 @@ a:hover {
 
 #wrap-outer {
   background: transparent url("background/typo3_netzmacher_background.png") scroll center repeat;
+  backgr
   min-height: 98%;
   padding: 2% 0;
-}
-#wrap-horizontal {
-  background-color:white;
-  background-image:url("background/wrap-horizontal_04.gif");
-  background-repeat:repeat-y;
-  margin: 0 auto;
-  min-height: 100%;
-  position: relative;
-  width: 1000px;
-  -moz-box-box-shadow: 5px 5px 25px #222;
-  -webkit-box-shadow: 5px 5px 25px #222;
-  box-shadow: 5px 5px 25px #222;
-}
-
-#wrap-vertical {
-/*  border-top: 6em solid #ff8c00;*/
-  padding-bottom:2em;
-  position: relative;
-  width:1000px;
-}
-#wrap-box {
-/*  border: 1px solid white;
-  border-bottom:0;*/
-  position: relative;
-}
-#offset-top {
-  height:55px;
 }
 /* wraps */
 
@@ -137,77 +116,21 @@ a:hover {
 *
 * elements */
 
-#headerBak {
-  background:#F79210;
-/*  border-bottom:1px solid white;*/
-  color: white;
-  font-size: 2em;
-  height:44px;
-  padding:10px 0 0 788px;
-  position: absolute;
-  top: 0;
-  width:210px;
+#content ul#record-browser {
+  margin: 0;
 }
-#header {
-/*    background-color: rgb(236,146,26); */
-    color: #fff;
-/*    #00001, 120902, dwildt, 1- */
-/*    padding: 150px 0 0;*/
-/*    #00002, 121001, dwildt, 3- */
-/*    left: 0;
-    position: absolute;
-    top: 0; */
-    width: 1000px;
+#content p.backbutton {
+  font-size: .8em;
 }
-  #wrap-slider-logo {
-      height: 130px;
-  /* 121001, dwildt, 1- */
-  /*    overflow: hidden;*/
-      position:relative;
-  }
-    /*#00001, 120902, dwildt+*/
-    #header-logo {
-        background-color: #F79210;
-        float: right;
-        height: 116px;
-/*        margin-left: -5px;*/
-        padding: 14px 20px 0 21px;
-        width: 191px;
-    }
-    /*#00001, 120902, dwildt+*/
-    #header-slider {
-        background-color: #F79210;
-        background-image:url("background/typo3_slider_w770px_h130px.png");
-        background-repeat:repeat-y;
-        height:130px;
-        overflow: hidden;
-        width: 768px;
-    }
-    /*#00002, 121001, dwildt+*/
+input.ui-button {
+  font-size: .8em;
+}
 
-#content {
-  float:left;
-  overflow:hidden;
-  padding:9px 10px 2em 10px;
-  position:relative;
-  width:748px;
-}
-#menue {
-  background:#F79210;
-  float:right;
-  overflow:hidden;
-  width:210px;
-}
-#footer {
-  background:#F79210;
-/*  border-top:1px solid white;*/
-  bottom:0;
-  color: #000;
-/*  height:6.4em;*/
-  padding:1em 0 0 0;
-  position:absolute;
-  text-align:center;
-  width:1000px;
+#slider h1,
+#slider h2,
+#slider h3,
+#slider p {
+  padding:0.4em 1em 0 1em;
 }
 /* elements */
 
@@ -217,48 +140,127 @@ a:hover {
 *
 * tags */
 
-h1 {
+xh1 {
   font-size:2em;
   margin-bottom:.4em;
 }
-h2 {
+xh2 {
   font-size:1.4em;
 }
-#menue a,
-#menue a:link,
-#menue a:visited,
+h1.align-center,
+h2.align-center,
+h3.align-center,
+p.align-center {
+  text-align:center;
+}
+h1.align-right,
+h2.align-right,
+h3.align-right,
+p.align-right  {
+  text-align:right;
+}
+#columnstopbar a,
+#columnstopbar a:link,
+#columnstopbar a:visited,
 #header a,
 #header a:link,
 #header a:visited,
-#footer a,
-#footer a:link,
-#footer a:visited {
+#columnsfooter a,
+#columnsfooter a:link,
+#columnsfooter a:visited {
   color:white;
   text-decoration:none;
 }
-#menue a:active,
-#menue a:focus,
-#menue a:hover,
+#columnstopbar a:active,
+#columnstopbar a:focus,
+#columnstopbar a:hover,
 #header a:active,
 #header a:focus,
 #header a:hover,
-#footer a:active,
-#footer a:focus,
-#footer a:hover {
+#columnsfooter a:active,
+#columnsfooter a:focus,
+#columnsfooter a:hover {
   color:#960000;
   text-decoration:none;
 }
 
-#menue ul,
-#menue ol {
+#columnstopbar ul,
+#columnstopbar ol {
   color:white;
   list-style:none;
   margin:0;
+  padding:0;
 }
-#menue ul ul,
-#menue ol ol {
-  color:white;
-  list-style:none;
-  margin-left:1em;
+#columnstopbar ul ul,
+#columnstopbar ol ol {
+  margin-left: 1em;
+}
+#columnstopbar ul ul ul,
+#columnstopbar ol ol ol {
+  margin-left: 2em;
+}
+#columnstopbar ul ul ul ul,
+#columnstopbar ol ol ol ol {
+  margin-left: 3em;
 }
 /* tags */
+
+
+
+
+/* tx-browser-pi1 */
+.tx-browser-pi1 a,
+.tx-browser-pi1 a:link,
+.tx-browser-pi1 a:visited {
+  color:#000;
+  text-decoration:none;
+}
+.tx-browser-pi1 a.inverse,
+.tx-browser-pi1 a.inverse:link,
+.tx-browser-pi1 a.inverse:visited {
+  color:#FFF;
+}
+.tx-browser-pi1 a:active,
+.tx-browser-pi1 a:focus,
+.tx-browser-pi1 a:hover {
+  color:#F79210;
+}
+.tx-browser-pi1 a.inverse:active,
+.tx-browser-pi1 a.inverse:focus,
+.tx-browser-pi1 a.inverse:hover {
+  color:#8B0000;
+  color:#F79210;
+}
+.tx-browser-pi1 ul.indexBrowser li.selected, .tx-browser-pi1 ul.modeSelector li.selected {
+  background:none repeat scroll 0 0 #FF8C00;
+}
+.tx-browser-pi1 .sword {
+  width:10em;
+}
+
+.searchbox fieldset,
+.selectboxorderby fieldset {
+  border:0;
+  padding:0;
+}
+.searchbox fieldset legend,
+.selectboxorderby fieldset legend {
+  display:none;
+}
+/* tx-browser-pi1 */
+
+/* foundation */
+ul.pricing-table li.title {
+  background-color:inherit;
+  padding:0;
+}
+ul.pricing-table li.title .button {
+  color:#FFF;
+  font-weight:bold;
+  margin:0;
+}
+ul.pricing-table li.price,
+ul.pricing-table li.title .button {
+  font-size:1.6rem;
+}
+
