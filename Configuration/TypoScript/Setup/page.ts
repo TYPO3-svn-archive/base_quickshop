@@ -138,25 +138,28 @@ page {
 
   headerData.10 < temp.htmlHead
   includeCSS {
+    // 141009, dwildt, -: Done by Browser - TYPO3 without PHP
     //base_quickshopNormalize  = {$plugin.base_quickshop.paths.normalize.css}
-    base_quickshopFoundation = {$plugin.base_quickshop.paths.foundation.css}
+    //base_quickshopFoundation = {$plugin.base_quickshop.paths.foundation.css}
     base_quickshopBasic      = {$plugin.base_quickshop.paths.basic.css}
   }
-  includeJS {
-    base_quickshopModernizr  = {$plugin.base_quickshop.paths.modernizr.js}
-  }
-  includeJSFooter {
+  // 141009, dwildt, -: Done by Browser - TYPO3 without PHP
+  //includeJS {
+  //  base_quickshopModernizr  = {$plugin.base_quickshop.paths.modernizr.js}
+  //}
+  // 141009, dwildt, -: Done by Browser - TYPO3 without PHP
+  //includeJSFooter {
     // Is included by the Browser - TYPO3 without PHP
     //base_quickshopJquery     = {$plugin.base_quickshop.paths.jquery.js}
     // Is included by the Browser - TYPO3 without PHP
     //base_quickshopFoundation = {$plugin.base_quickshop.paths.foundation.js}
-  }
-  jsFooterInline {
-    60107 = TEXT
-    60107 {
-      value = $( document ).foundation();
-    }
-  }
+  //}
+  //jsFooterInline {
+  //  60107 = TEXT
+  //  60107 {
+  //    value = $( document ).foundation();
+  //  }
+  //}
   meta {
     author = {$plugin.base_quickshop.client.name}
     keywords {
