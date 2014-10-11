@@ -250,12 +250,23 @@ p.align-right  {
 /* tx-browser-pi1 */
 
 /* foundation */
+a.button,
+a.button:link,
+a.button:visited {
+  color:#FFF;
+}
+a.button:active,
+a.button:focus,
+a.button:hover {
+  color:#FFF;
+}
+
 ul.pricing-table li.title {
   background-color:inherit;
   padding:0;
 }
 ul.pricing-table li.title .button {
-  color:#FFF;
+  /*color:#FFF;*/
   font-weight:bold;
   margin:0;
 }
