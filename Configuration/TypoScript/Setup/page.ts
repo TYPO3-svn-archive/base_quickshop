@@ -179,7 +179,7 @@ temp.body {
       // content
     columnsfootercontent < styles.content.get
     columnsfootercontent {
-      select.pidInList = {$plugin.baseorg.pages.root.libraries.footer}
+      select.pidInList = {$plugin.base_quickshop.pages.root.libraries.footer}
     }
   }
 }
