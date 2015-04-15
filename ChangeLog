@@ -1,3 +1,13 @@
+6.0.12
+  15-04-15
+  Improvement
+  Feature
+  * #i0010: Slider in page TS
+  * #i0009: Footer menu. See
+            * static/includes/setup/page.ts
+  Improvement
+  * #i0011: Slider background-image
+
 6.0.2
   15-04-11
   Improvement

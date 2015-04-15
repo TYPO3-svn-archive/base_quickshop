@@ -5,6 +5,7 @@
   elements
   tags
   tx-browser-pi1
+  foundation
 */
 
 
@@ -58,24 +59,9 @@ a:hover {
 *
 * rows, columns */
 
-#rowheader {
-  background-color: #F79210;
-  background-image:url("background/website_header_cmyk_1000x130.png");
-  background-repeat:repeat-y;
-  height:130px;
-  overflow: hidden;
-  color: white;
-}
-#rowfootercontent {
+#rowheader, #rowfooter {
   background-color: #F79210;
   color: white;
-}
-#rowfootermenu {
-  background-color: #333;
-  color: white;
-}
-#rowfootermenu li {
-  margin-bottom:0.2em;
 }
 #rowtopbar {
   background-color: #333;
@@ -85,25 +71,18 @@ a:hover {
   background-color: #FFF;
 }
 
-#columnslogo {
-  padding-top:14px;
-}
-
 #columnscontent {
-  padding-bottom:1em;
   padding-top:1em;
 }
 
 #columnsslider {
-  background-image:url("background/typo3_slider_cmyk_1000x130");
+  background-image:url("background/typo3_slider_cmyk_1000x130.png");
   background-repeat:repeat-y;
   height:130px;
   overflow: hidden;
-  padding-left: 0;
-  padding-right: 0;
 }
 
-#columnsfootercontent {
+#columnsfooter {
   padding:1em 0 .1em 0;
   text-align:center;
 }
@@ -125,7 +104,8 @@ a:hover {
 
 #wrap-outer {
   background: transparent url("background/typo3_netzmacher_background.png") scroll center repeat;
-  min-height: 96%;
+  backgr
+  min-height: 98%;
   padding: 2% 0;
 }
 /* wraps */
@@ -185,9 +165,9 @@ p.align-right  {
 #header a,
 #header a:link,
 #header a:visited,
-#columnsfootercontent a,
-#columnsfootercontent a:link,
-#columnsfootercontent a:visited {
+#columnsfooter a,
+#columnsfooter a:link,
+#columnsfooter a:visited {
   color:white;
   text-decoration:none;
 }
@@ -197,49 +177,11 @@ p.align-right  {
 #header a:active,
 #header a:focus,
 #header a:hover,
-#columnsfootercontent a:active,
-#columnsfootercontent a:focus,
-#columnsfootercontent a:hover {
+#columnsfooter a:active,
+#columnsfooter a:focus,
+#columnsfooter a:hover {
   color:#960000;
   text-decoration:none;
-}
-#rowfootermenu a,
-#rowfootermenu a:link,
-#rowfootermenu a:visited
-{
-  color:#BBB;
-  text-decoration:none;
-}
-#rowfootermenu a:active,
-#rowfootermenu a:focus,
-#rowfootermenu a:hover,
-#rowfootermenu .active a,
-#rowfootermenu .active a:link,
-#rowfootermenu .active a:visited
-{
-  color:#F79210;
-}
-#rowfootermenu .active a:active,
-#rowfootermenu .active a:focus,
-#rowfootermenu .active a:hover
-{
-  color:#FFF;
-}
-#rowfootermenu a
-{
-  font-weight:normal;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-#rowfootermenu .spc
-{
-  padding: 0 0.875rem;
-}
-#rowfootermenu .spc hr
-{
-  border-color: #BBB;
-  margin: 0.75rem 0px;
 }
 
 #columnstopbar ul,
@@ -273,9 +215,20 @@ p.align-right  {
   color:#000;
   text-decoration:none;
 }
+.tx-browser-pi1 a.inverse,
+.tx-browser-pi1 a.inverse:link,
+.tx-browser-pi1 a.inverse:visited {
+  color:#FFF;
+}
 .tx-browser-pi1 a:active,
 .tx-browser-pi1 a:focus,
 .tx-browser-pi1 a:hover {
+  color:#F79210;
+}
+.tx-browser-pi1 a.inverse:active,
+.tx-browser-pi1 a.inverse:focus,
+.tx-browser-pi1 a.inverse:hover {
+  color:#8B0000;
   color:#F79210;
 }
 .tx-browser-pi1 ul.indexBrowser li.selected, .tx-browser-pi1 ul.modeSelector li.selected {
@@ -295,3 +248,30 @@ p.align-right  {
   display:none;
 }
 /* tx-browser-pi1 */
+
+/* foundation */
+a.button,
+a.button:link,
+a.button:visited {
+  color:#FFF;
+}
+a.button:active,
+a.button:focus,
+a.button:hover {
+  color:#FFF;
+}
+
+ul.pricing-table li.title {
+  background-color:inherit;
+  padding:0;
+}
+ul.pricing-table li.title .button {
+  /*color:#FFF;*/
+  font-weight:bold;
+  margin:0;
+}
+ul.pricing-table li.price,
+ul.pricing-table li.title .button {
+  font-size:1.6rem;
+}
+
