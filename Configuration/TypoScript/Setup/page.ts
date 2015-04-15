@@ -176,9 +176,10 @@ temp.body {
         maxItems  >
       }
     }
-    columnsfooter  < styles.content.get
-    columnsfooter {
-      select.pidInList = {$plugin.base_quickshop.pages.root.libraries.footer}
+      // content
+    columnsfootercontent < styles.content.get
+    columnsfootercontent {
+      select.pidInList = {$plugin.baseorg.pages.root.libraries.footer}
     }
   }
 }
