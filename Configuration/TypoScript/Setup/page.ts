@@ -50,6 +50,11 @@ temp.body {
   workOnSubpart = DOCUMENT_BODY
 
   subparts {
+      // slider
+    columnsslider < styles.content.get
+    columnsslider {
+      select.pidInList = {$plugin.baseorg.pages.root.libraries.header.slider.content}
+    }
     columnslogo   < temp.header.header-logo
     columnscontent < styles.content.get
     XXXcolumnstopbar = COA
@@ -113,6 +118,62 @@ temp.body {
           max       = 1
           //colPos    = 0
         }
+      }
+    }
+      // menu
+    rowfootermenu = COA
+    rowfootermenu {
+      if {
+        isTrue = 0
+      }
+        // 1st column (from 8 to 12)
+      10 < tt_content.menu.20.1
+      10 {
+        begin     = 8
+        maxItems  = 4
+        special   >
+        stdWrap {
+          prepend >
+          outerWrap = <ul class="side-nav large-3 columns" role="navigation" title="Link List">|</ul>
+        }
+        1 {
+          NO {
+            wrapItemAndSub = <li role="menuitem">|</li>
+          }
+          ACT < .NO
+          ACT = 1
+          ACT {
+            wrapItemAndSub = <li role="menuitem" class="active">|</li>
+          }
+          SPC = 1
+          SPC {
+            stdWrap {
+              cObject = TEXT
+              cObject {
+                value = <hr />
+              }
+            }
+            wrapItemAndSub = <li class="spc">|</li>
+          }
+        }
+      }
+        // 2nd column (from 12 to 16)
+      20 < .10
+      20 {
+        begin     = 12
+        maxItems  = 4
+      }
+        // 3rd column (from 16 to 20)
+      30 < .10
+      30 {
+        begin     = 16
+        maxItems  = 4
+      }
+        // 4th column (from 20 to unlimited)
+      40 < .10
+      40 {
+        begin     = 20
+        maxItems  >
       }
     }
     columnsfooter  < styles.content.get
