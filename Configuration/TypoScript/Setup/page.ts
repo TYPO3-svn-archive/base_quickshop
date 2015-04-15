@@ -53,7 +53,7 @@ temp.body {
       // slider
     columnsslider < styles.content.get
     columnsslider {
-      select.pidInList = {$plugin.baseorg.pages.root.libraries.header.slider.content}
+      select.pidInList = {$plugin.base_quickshop.pages.root.libraries.header.slider.content}
     }
     columnslogo   < temp.header.header-logo
     columnscontent < styles.content.get
