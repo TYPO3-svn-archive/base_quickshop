@@ -126,54 +126,87 @@ temp.body {
       if {
         isTrue = 0
       }
-        // 1st column (from 8 to 12)
-      10 < tt_content.menu.20.1
+      10 = COA
       10 {
-        begin     = 8
-        maxItems  = 4
-        special   >
-        stdWrap {
-          prepend >
-          outerWrap = <ul class="side-nav large-3 columns" role="navigation" title="Link List">|</ul>
-        }
-        1 {
-          NO {
-            wrapItemAndSub = <li role="menuitem">|</li>
+        wrap = <div class="large-6 columns"><div class="row">|</div></div>
+          // 1st column (from 8 to 12)
+        10 < tt_content.menu.20.1
+        10 {
+          begin     = 8
+          maxItems  = 4
+          special   >
+          stdWrap {
+            prepend >
+            outerWrap = <ul class="side-nav large-6 columns" role="navigation" title="Link List">|</ul>
           }
-          ACT < .NO
-          ACT = 1
-          ACT {
-            wrapItemAndSub = <li role="menuitem" class="active">|</li>
-          }
-          SPC = 1
-          SPC {
-            stdWrap {
-              cObject = TEXT
-              cObject {
-                value = <hr />
-              }
+          1 {
+            NO {
+              wrapItemAndSub = <li role="menuitem">|</li>
             }
-            wrapItemAndSub = <li class="spc">|</li>
+            ACT < .NO
+            ACT = 1
+            ACT {
+              wrapItemAndSub = <li role="menuitem" class="active">|</li>
+            }
+            SPC = 1
+            SPC {
+              stdWrap {
+                cObject = TEXT
+                cObject {
+                  value = <hr />
+                }
+              }
+              wrapItemAndSub = <li class="spc">|</li>
+            }
           }
         }
+          // 2nd column (from 12 to 16)
+        20 < .10
+        20 {
+          begin     = 12
+          maxItems  = 4
+        }
       }
-        // 2nd column (from 12 to 16)
-      20 < .10
+      20 = COA
       20 {
-        begin     = 12
-        maxItems  = 4
-      }
-        // 3rd column (from 16 to 20)
-      30 < .10
-      30 {
-        begin     = 16
-        maxItems  = 4
-      }
-        // 4th column (from 20 to unlimited)
-      40 < .10
-      40 {
-        begin     = 20
-        maxItems  >
+        wrap = <div class="large-6 columns"><div class="row">|</div></div>
+          // 3rd column (from 16 to 20)
+        30 < tt_content.menu.20.1
+        30 {
+          begin     = 16
+          maxItems  = 4
+          special   >
+          stdWrap {
+            prepend >
+            outerWrap = <ul class="side-nav large-6 columns" role="navigation" title="Link List">|</ul>
+          }
+          1 {
+            NO {
+              wrapItemAndSub = <li role="menuitem">|</li>
+            }
+            ACT < .NO
+            ACT = 1
+            ACT {
+              wrapItemAndSub = <li role="menuitem" class="active">|</li>
+            }
+            SPC = 1
+            SPC {
+              stdWrap {
+                cObject = TEXT
+                cObject {
+                  value = <hr />
+                }
+              }
+              wrapItemAndSub = <li class="spc">|</li>
+            }
+          }
+        }
+          // 4th column (from 20 to unlimited)
+        40 < .30
+        40 {
+          begin     = 20
+          maxItems  >
+        }
       }
     }
       // content
