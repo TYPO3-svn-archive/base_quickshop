@@ -137,7 +137,7 @@ temp.body {
           special   >
           stdWrap {
             prepend >
-            outerWrap = <ul class="side-nav medium-6 columns" role="navigation" title="Link List">|</ul>
+            outerWrap = <ul class="side-nav large-6 columns" role="navigation" title="Link List">|</ul>
           }
           1 {
             NO {
@@ -178,7 +178,7 @@ temp.body {
           special   >
           stdWrap {
             prepend >
-            outerWrap = <ul class="side-nav medium-6 columns" role="navigation" title="Link List">|</ul>
+            outerWrap = <ul class="side-nav large-6 columns" role="navigation" title="Link List">|</ul>
           }
           1 {
             NO {
