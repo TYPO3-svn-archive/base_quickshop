@@ -1,6 +1,10 @@
+6.0.13
+  15-04-17
+  Improvement
+  * #i0012: Show slider in small, medium and large
+
 6.0.12
   15-04-15
-  Improvement
   Feature
   * #i0010: Slider in page TS
   * #i0009: Footer menu. See

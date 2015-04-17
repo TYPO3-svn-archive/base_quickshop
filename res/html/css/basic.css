@@ -62,7 +62,7 @@ a:hover {
   background-color: #F79210;
   background-image:url("background/typo3_slider_cmyk_1000x130.png");
   background-repeat:repeat-y;
-  height:130px;
+/*  height:130px;*/
   overflow: hidden;
   color: white;
 }
@@ -97,7 +97,7 @@ a:hover {
 #columnsslider {
   background-image:url("background/typo3_slider_cmyk_1000x130");
   background-repeat:repeat-y;
-  height:130px;
+/*  height:130px;*/
   overflow: hidden;
   padding-left: 0;
   padding-right: 0;
