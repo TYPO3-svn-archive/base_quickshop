@@ -167,43 +167,15 @@ temp.body {
           maxItems  = 4
         }
       }
-      20 = COA
+      20 < .10
       20 {
-        wrap = <div class="medium-6 columns"><div class="row">|</div></div>
           // 3rd column (from 16 to 20)
-        30 < tt_content.menu.20.1
-        30 {
+        10 {
           begin     = 16
           maxItems  = 4
-          special   >
-          stdWrap {
-            prepend >
-            outerWrap = <ul class="side-nav large-6 columns" role="navigation" title="Link List">|</ul>
-          }
-          1 {
-            NO {
-              wrapItemAndSub = <li role="menuitem">|</li>
-            }
-            ACT < .NO
-            ACT = 1
-            ACT {
-              wrapItemAndSub = <li role="menuitem" class="active">|</li>
-            }
-            SPC = 1
-            SPC {
-              stdWrap {
-                cObject = TEXT
-                cObject {
-                  value = <hr />
-                }
-              }
-              wrapItemAndSub = <li class="spc">|</li>
-            }
-          }
         }
           // 4th column (from 20 to unlimited)
-        40 < .30
-        40 {
+        20 {
           begin     = 20
           maxItems  >
         }
