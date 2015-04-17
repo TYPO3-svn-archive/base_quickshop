@@ -128,7 +128,7 @@ temp.body {
       }
       10 = COA
       10 {
-        wrap = <div class="large-6 columns"><div class="row">|</div></div>
+        wrap = <div class="medium-6 columns"><div class="row">|</div></div>
           // 1st column (from 8 to 12)
         10 < tt_content.menu.20.1
         10 {
@@ -137,7 +137,7 @@ temp.body {
           special   >
           stdWrap {
             prepend >
-            outerWrap = <ul class="side-nav large-6 columns" role="navigation" title="Link List">|</ul>
+            outerWrap = <ul class="side-nav medium-6 columns" role="navigation" title="Link List">|</ul>
           }
           1 {
             NO {
@@ -169,7 +169,7 @@ temp.body {
       }
       20 = COA
       20 {
-        wrap = <div class="large-6 columns"><div class="row">|</div></div>
+        wrap = <div class="medium-6 columns"><div class="row">|</div></div>
           // 3rd column (from 16 to 20)
         30 < tt_content.menu.20.1
         30 {
@@ -178,7 +178,7 @@ temp.body {
           special   >
           stdWrap {
             prepend >
-            outerWrap = <ul class="side-nav large-6 columns" role="navigation" title="Link List">|</ul>
+            outerWrap = <ul class="side-nav medium-6 columns" role="navigation" title="Link List">|</ul>
           }
           1 {
             NO {
