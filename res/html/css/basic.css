@@ -36,18 +36,18 @@ body {
   position: relative;
   width: 100%;
 }
-a {
+a:not(.button) {
   font-weight:bold;
 }
-a,
-a:link,
-a:visited {
+a:not(.button),
+a:not(.button):link,
+a:not(.button):visited {
   color:#F79210;
   text-decoration:none;
 }
-a:active,
-a:focus,
-a:hover {
+a:not(.button):active,
+a:not(.button):focus,
+a:not(.button):hover {
   color:#8B0000;
 }
 /* html, body, a */
@@ -225,7 +225,7 @@ p.align-right  {
 {
   color:#FFF;
 }
-#rowfootermenu a
+#rowfootermenu a:not(.button)
 {
   font-weight:normal;
   padding-bottom: 0;
@@ -267,15 +267,21 @@ p.align-right  {
 
 
 /* tx-browser-pi1 */
-.tx-browser-pi1 a,
-.tx-browser-pi1 a:link,
-.tx-browser-pi1 a:visited {
+.tx-browser-pi1 .filter a:not(.button),
+.tx-browser-pi1 .filter  a:not(.button):link,
+.tx-browser-pi1 .filter  a:not(.button):visited,
+.tx-browser-pi1 .listview a:not(.button),
+.tx-browser-pi1 .listview  a:not(.button):link,
+.tx-browser-pi1 .listview  a:not(.button):visited {
   color:#000;
   text-decoration:none;
 }
-.tx-browser-pi1 a:active,
-.tx-browser-pi1 a:focus,
-.tx-browser-pi1 a:hover {
+.tx-browser-pi1 .filter  a:not(.button):active,
+.tx-browser-pi1 .filter  a:not(.button):focus,
+.tx-browser-pi1 .filter  a:not(.button):hover,
+.tx-browser-pi1 .listview  a:not(.button):active,
+.tx-browser-pi1 .listview  a:not(.button):focus,
+.tx-browser-pi1 .listview  a:not(.button):hover {
   color:#F79210;
 }
 .tx-browser-pi1 ul.indexBrowser li.selected, .tx-browser-pi1 ul.modeSelector li.selected {
