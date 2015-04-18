@@ -36,18 +36,18 @@ body {
   position: relative;
   width: 100%;
 }
-a:not(.button) {
+#columnscontent a:not(.button) {
   font-weight:bold;
-}
-a:not(.button),
-a:not(.button):link,
-a:not(.button):visited {
-  color:#F79210;
   text-decoration:none;
 }
-a:not(.button):active,
-a:not(.button):focus,
-a:not(.button):hover {
+#columnscontent a:not(.button),
+#columnscontent a:not(.button):link,
+#columnscontent a:not(.button):visited {
+  color:#F79210;
+}
+#columnscontent a:not(.button):active,
+#columnscontent a:not(.button):focus,
+#columnscontent a:not(.button):hover {
   color:#8B0000;
 }
 /* html, body, a */
@@ -62,7 +62,7 @@ a:not(.button):hover {
   background-color: #F79210;
   background-image:url("background/typo3_slider_cmyk_1000x130.png");
   background-repeat:repeat-y;
-/*  height:130px;*/
+  /*  height:130px;*/
   overflow: hidden;
   color: white;
 }
@@ -97,7 +97,7 @@ a:not(.button):hover {
 #columnsslider {
   background-image:url("background/typo3_slider_cmyk_1000x130");
   background-repeat:repeat-y;
-/*  height:130px;*/
+  /*  height:130px;*/
   overflow: hidden;
   padding-left: 0;
   padding-right: 0;
@@ -160,13 +160,6 @@ input.ui-button {
 *
 * tags */
 
-xh1 {
-  font-size:2em;
-  margin-bottom:.4em;
-}
-xh2 {
-  font-size:1.4em;
-}
 h1.align-center,
 h2.align-center,
 h3.align-center,
@@ -267,21 +260,21 @@ p.align-right  {
 
 
 /* tx-browser-pi1 */
-.tx-browser-pi1 .filter a:not(.button),
-.tx-browser-pi1 .filter  a:not(.button):link,
-.tx-browser-pi1 .filter  a:not(.button):visited,
-.tx-browser-pi1 .listview a:not(.button),
-.tx-browser-pi1 .listview  a:not(.button):link,
-.tx-browser-pi1 .listview  a:not(.button):visited {
+#columnscontent .tx-browser-pi1 .filter a:not(.button),
+#columnscontent .tx-browser-pi1 .filter  a:not(.button):link,
+#columnscontent .tx-browser-pi1 .filter  a:not(.button):visited,
+#columnscontent .tx-browser-pi1 .listview a:not(.button),
+#columnscontent .tx-browser-pi1 .listview  a:not(.button):link,
+#columnscontent .tx-browser-pi1 .listview  a:not(.button):visited {
   color:#000;
   text-decoration:none;
 }
-.tx-browser-pi1 .filter  a:not(.button):active,
-.tx-browser-pi1 .filter  a:not(.button):focus,
-.tx-browser-pi1 .filter  a:not(.button):hover,
-.tx-browser-pi1 .listview  a:not(.button):active,
-.tx-browser-pi1 .listview  a:not(.button):focus,
-.tx-browser-pi1 .listview  a:not(.button):hover {
+#columnscontent .tx-browser-pi1 .filter  a:not(.button):active,
+#columnscontent .tx-browser-pi1 .filter  a:not(.button):focus,
+#columnscontent .tx-browser-pi1 .filter  a:not(.button):hover,
+#columnscontent .tx-browser-pi1 .listview  a:not(.button):active,
+#columnscontent .tx-browser-pi1 .listview  a:not(.button):focus,
+#columnscontent .tx-browser-pi1 .listview  a:not(.button):hover {
   color:#F79210;
 }
 .tx-browser-pi1 ul.indexBrowser li.selected, .tx-browser-pi1 ul.modeSelector li.selected {
@@ -301,3 +294,15 @@ p.align-right  {
   display:none;
 }
 /* tx-browser-pi1 */
+
+#columnscontent ul.pagination li a,
+#columnscontent ul.pagination li button,
+#columnscontent ul.pagination li.unavailable a,
+#columnscontent ul.pagination li.unavailable button {
+  color: #999999 !important;
+}
+#columnscontent ul.pagination li.current a,
+#columnscontent ul.pagination li.current button {
+  color: #FFFFFF !important;
+}
+
