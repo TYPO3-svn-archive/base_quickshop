@@ -56,57 +56,18 @@ temp.body {
       select.pidInList = {$plugin.base_quickshop.pages.root.libraries.header.slider.content}
     }
     columnslogo   < temp.header.header-logo
-    columnscontent < styles.content.get
-    XXXcolumnstopbar = COA
-    XXXcolumnstopbar {
-        // minicaddy
-      10 = CONTENT
+    columnscontent = COA
+    columnscontent {
+      10 < styles.content.get
       10 {
-        table = tt_content
         select {
-          pidInList = {$plugin.base_quickshop.pages.root.caddymini}
+          pidInList = {$plugin.caddy.pages.caddymini}
           orderBy   = sorting
-          //max       = 1
-          //colPos    = 0
+          max       = 1
         }
       }
-        // menu
-      30 = COA
-      30 {
-          // root page
-        10 = HMENU
-        10 {
-          special = list
-          special.value = {$plugin.base_quickshop.pages.root}
-          1 < temp.tmenu
-        }
-          // space
-        20 = TEXT
-        20 {
-          value (
-            <ul>
-              <li class="spc">
-                &nbsp;
-              </li>
-            </ul>
-          )
-        }
-          // 1st level
-        30 < base_quickshop.nav.foundation.topbar
-      }
-        // Menu bottom
-      90 = CONTENT
-      90 {
-        table = tt_content
-        select {
-          pidInList = {$plugin.base_quickshop.pages.root.libraries.menu.bottom}
-          orderBy   = sorting
-          //max       = 1
-          //colPos    = 0
-        }
-      }
+      20 < styles.content.get
     }
-    columnstopbar >
     rowtopbar = COA
     rowtopbar {
       20 = CONTENT
@@ -249,3 +210,15 @@ page {
 
 }
   // page
+
+
+
+[globalVar = TSFE:id = {$plugin.caddy.pages.caddy}]
+  page.10 {
+    subparts {
+      columnscontent {
+        10 >
+      }
+    }
+  }
+[end]

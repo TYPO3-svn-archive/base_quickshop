@@ -17,8 +17,6 @@ plugin.base_quickshop {
   pages.root.libraries.menu.bottom  = 100000
   # cat=Quick Shop Template - Pages*//105;   type=+int;   label= Slider Content*: *Obligate! Uid of the page, which contains the content element for the header slider
   pages.root.libraries.header.slider.content  = 100000
-  # cat=Quick Shop Template - Pages*//201;   type=+int;   label= Minicaddy:Uid of the page, which contains the minicaddy
-  pages.root.caddymini  = 100000
 
   # cat=Quick Shop Template - Paths//100;     type=string;   label= normalize.css: Path to the CSS normalize file
   paths.normalize.css   = EXT:base_quickshop/res/foundation-5.3.0/css/normalize.css
